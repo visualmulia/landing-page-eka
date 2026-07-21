@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eka Karya Konstruksi - Kontraktor finishing kayu premium spesialis kusen pintu, lambersering, pooldeck kayu, dan millwork kustom berkualitas tinggi dengan keindahan abadi.">
+  <title>Eka Karya Konstruksi | Spesialis Finishing Kayu & Kusen Premium</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="bg-ambient">
+    <div class="blob blob-1" id="ambient-blob-1"></div>
+    <div class="blob blob-2" id="ambient-blob-2"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="logo-link">
+        <div class="logo-icon"><i class="fa-solid fa-tree"></i></div>
+        Eka Karya<span>.</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="#beranda" class="nav-link">Beranda</a></li>
+          <li><a href="#layanan" class="nav-link">Layanan</a></li>
+          <li><a href="#portofolio" class="nav-link">Portofolio</a></li>
+          <li><a href="#filosofi" class="nav-link">Filosofi</a></li>
+          <li><a href="#kontak" class="nav-link">Hubungi Kami</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-cta" style="gap: 15px; align-items: center;">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ubah Tema Warna">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <a href="#kontak" class="btn btn-primary" id="header-cta-btn">Konsultasi Gratis</a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav-menu" aria-label="Menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Panel -->
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <ul class="mobile-menu-list">
+      <li><a href="#beranda" class="mobile-menu-link">Beranda</a></li>
+      <li><a href="#layanan" class="mobile-menu-link">Layanan</a></li>
+      <li><a href="#portofolio" class="mobile-menu-link">Portofolio</a></li>
+      <li><a href="#filosofi" class="mobile-menu-link">Filosofi</a></li>
+      <li><a href="#kontak" class="mobile-menu-link">Hubungi Kami</a></li>
+    </ul>
+    <div style="margin-top: var(--space-md); display: flex; gap: var(--space-sm); align-items: center;">
+      <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Ubah Tema Warna">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="#kontak" class="btn btn-primary" id="mobile-cta-btn">Konsultasi Gratis</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="beranda">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tagline reveal-fade-left" id="hero-badge-contractor">
+          <i class="fa-solid fa-certificate"></i> Premium Wood Craftsmanship
+        </div>
+        <h1 class="hero-title reveal-fade-left" id="hero-main-title">
+          Sentuhan Estetika <span>Finishing Kayu</span> Terbaik untuk Properti Anda
+        </h1>
+        <p class="hero-desc reveal-fade-left" id="hero-description">
+          Eka Karya Konstruksi menghadirkan keindahan alami kayu yang berkelas dan tahan lama. Spesialis dalam pembuatan kusen pintu presisi, lambersering mewah, dan pooldeck kayu outdoor berkualitas tinggi.
+        </p>
+        <div class="hero-actions reveal-fade-left" id="hero-actions-container">
+          <a href="#kontak" class="btn btn-primary" id="hero-primary-btn">Mulai Konsultasi <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#portofolio" class="btn btn-secondary" id="hero-secondary-btn">Lihat Karya Kami</a>
+        </div>
+        
+        <div class="hero-stats reveal-fade-left" id="hero-statistics">
+          <div class="stat-item">
+            <h3 id="stat-experience">12+</h3>
+            <p>Tahun Pengalaman</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="stat-projects">350+</h3>
+            <p>Proyek Selesai</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="stat-satisfaction">98%</h3>
+            <p>Klien Puas</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image-wrapper reveal-fade-right" id="hero-showcase-wrapper">
+        <div class="hero-image-container" id="hero-showcase-card">
+          <img src="assets/hero_wood.png" alt="Finishing Teak Wood Premium Eka Karya Konstruksi" class="hero-image" id="hero-main-img">
+          <div class="hero-badge" id="hero-quality-badge">
+            <div class="hero-badge-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="hero-badge-text">
+              <h4>Kayu Pilihan Terbaik</h4>
+              <p>Hanya menggunakan Jati & Merbau bersertifikasi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services / Layanan Section -->
+  <section class="services-section" id="layanan">
+    <div class="container">
+      <div class="section-header reveal-fade" id="services-section-hdr">
+        <span class="section-subtitle">Layanan Kami</span>
+        <h2 class="section-title">Solusi Konstruksi & Finishing Kayu Presisi</h2>
+        <p>Dari detail interior halus hingga instalasi eksterior tangguh, kami memahat keindahan alami kayu dengan keahlian profesional tanpa kompromi.</p>
+      </div>
+      
+      <div class="services-grid" id="services-cards-grid">
+        <!-- Service 1 -->
+        <article class="service-card reveal-fade" id="service-card-kusen">
+          <div class="service-image-container">
+            <img src="assets/door_frame.png" alt="Instalasi Kusen Pintu Premium Eka Karya" class="service-image">
+          </div>
+          <div class="service-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h3>Kusen Pintu & Jendela</h3>
+          <p>Pembuatan kusen, pintu, dan jendela kayu dengan presisi tinggi dan sudut sambungan sempurna. Tersedia opsi kayu Jati, Kamper, dan Merbau.</p>
+          <div class="service-tags">
+            <span class="service-tag">Presisi CNC</span>
+            <span class="service-tag">Kedap Suara</span>
+            <span class="service-tag">Anti Muai</span>
+          </div>
+        </article>
+
+        <!-- Service 2 -->
+        <article class="service-card reveal-fade" id="service-card-lambersering">
+          <div class="service-image-container">
+            <img src="assets/lambersering.png" alt="Lambersering Kayu Panel Mewah Eka Karya" class="service-image">
+          </div>
+          <div class="service-icon"><i class="fa-solid fa-grip-lines"></i></div>
+          <h3>Lambersering & Wall Panel</h3>
+          <p>Panel kayu plafon dan dinding untuk nuansa ruangan yang hangat, mewah, dan natural. Diproses dengan coating tahan kelembapan.</p>
+          <div class="service-tags">
+            <span class="service-tag">Plafon Kayu</span>
+            <span class="service-tag">Wall Molding</span>
+            <span class="service-tag">Satin Finish</span>
+          </div>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-card reveal-fade" id="service-card-pooldeck">
+          <div class="service-image-container">
+            <img src="assets/pooldeck.png" alt="Wooden Pooldeck Kayu Ulin Eka Karya" class="service-image">
+          </div>
+          <div class="service-icon"><i class="fa-solid fa-water"></i></div>
+          <h3>Wooden Pooldeck & Decking</h3>
+          <p>Lantai luar ruangan di area kolam renang atau teras dari kayu ulin dan bengkirai berkualitas ekspor. Tahan air, cuaca ekstrem, dan rayap.</p>
+          <div class="service-tags">
+            <span class="service-tag">Kayu Ulin</span>
+            <span class="service-tag">Anti-Slip</span>
+            <span class="service-tag">Weatherproof</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy & Craftsmanship Section -->
+  <section class="craft-section" id="filosofi">
+    <div class="container craft-grid">
+      <div class="craft-image-wrapper reveal-fade-left" id="craft-illustrative-wrapper">
+        <div class="hero-image-container" style="aspect-ratio: 16/10; max-width: 100%; height: auto;" id="craft-main-card">
+          <img src="assets/craftsman.png" alt="Pengrajin Kayu Eka Karya Konstruksi sedang bekerja" class="hero-image" id="craft-main-img">
+        </div>
+      </div>
+      
+      <div class="craft-content reveal-fade-right" id="craft-details-content">
+        <span class="section-subtitle">Filosofi & Kualitas</span>
+        <h2 class="section-title">Dedikasi Pada Detail & Presisi Sejati</h2>
+        <p style="margin-bottom: var(--space-md);">Finishing kayu bukan sekadar pekerjaan konstruksi biasa bagi kami, melainkan sebuah seni merawat serat kayu agar dapat bercerita. Setiap sambungan, pengamplasan, dan lapisan pernis melewati standar kontrol kualitas yang ketat.</p>
+        
+        <div class="craft-steps">
+          <div class="craft-step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Pemilihan Kayu Grade A</h3>
+              <p>Kami menyeleksi langsung kayu dengan tingkat kadar air (MC) rendah untuk mencegah deformasi.</p>
+            </div>
+          </div>
+          <div class="craft-step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Pabrikasi Presisi Tinggi</h3>
+              <p>Setiap potongan dan purukan kusen diukur dengan akurasi millimeter agar pas saat pemasangan.</p>
+            </div>
+          </div>
+          <div class="craft-step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Sistem Proteksi Bertingkat</h3>
+              <p>Menggunakan bahan coating bersertifikasi internasional yang ramah lingkungan dan tahan sinar UV.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Gallery Section -->
+  <section class="portfolio-section" id="portofolio">
+    <div class="container">
+      <div class="section-header reveal-fade" id="portfolio-section-hdr">
+        <span class="section-subtitle">Portofolio Kami</span>
+        <h2 class="section-title">Karya Finishing Pilihan</h2>
+        <p>Inspirasi estetika pengerjaan kayu terbaik kami pada proyek perumahan mewah, resort, dan komersial.</p>
+      </div>
+      
+      <div class="portfolio-filters reveal-fade" id="portfolio-category-filters">
+        <button class="filter-btn active" data-filter="all" id="filter-btn-all">Semua Proyek</button>
+        <button class="filter-btn" data-filter="kusen" id="filter-btn-kusen">Kusen & Pintu</button>
+        <button class="filter-btn" data-filter="panel" id="filter-btn-panel">Lambersering</button>
+        <button class="filter-btn" data-filter="decking" id="filter-btn-decking">Pooldeck & Decking</button>
+      </div>
+      
+      <div class="portfolio-grid" id="portfolio-items-grid">
+        <!-- Item 1 -->
+        <div class="portfolio-item reveal-fade" data-category="kusen" id="portfolio-item-1">
+          <img src="assets/door_frame.png" alt="Pintu Kayu Jati Solid Eka Karya">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Kusen & Pintu</span>
+            <h3 class="portfolio-title">Pintu Utama Jati Solid</h3>
+            <p class="portfolio-desc">Rumah Tinggal Premium, Jakarta Selatan</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="portfolio-item reveal-fade" data-category="panel" id="portfolio-item-2">
+          <img src="assets/lambersering.png" alt="Plafon Kayu Lambersering Eka Karya">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Lambersering</span>
+            <h3 class="portfolio-title">Plafon Kayu Kamper</h3>
+            <p class="portfolio-desc">Living Room Villa Tropis, Bali</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="portfolio-item reveal-fade" data-category="decking" id="portfolio-item-3">
+          <img src="assets/pooldeck.png" alt="Pooldeck Kayu Ulin Kolam Renang Eka Karya">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Pooldeck & Decking</span>
+            <h3 class="portfolio-title">Pooldeck Kayu Ulin</h3>
+            <p class="portfolio-desc">Private Resort Residence, Sentul</p>
+          </div>
+        </div>
+        
+        <!-- Item 4 (re-use generated assets with different descriptions for variation) -->
+        <div class="portfolio-item reveal-fade" data-category="kusen" id="portfolio-item-4">
+          <img src="assets/hero_wood.png" alt="Detail Tekstur Finishing Serat Kayu Eka Karya">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Kusen & Pintu</span>
+            <h3 class="portfolio-title">Finishing Clear Gloss Teak</h3>
+            <p class="portfolio-desc">Kusen Jendela Minimalis, Bandung</p>
+          </div>
+        </div>
+        
+        <div class="portfolio-item reveal-fade" data-category="panel" id="portfolio-item-5">
+          <img src="assets/lambersering.png" alt="Lambersering Dinding Aksen Kayu Eka Karya">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Lambersering</span>
+            <h3 class="portfolio-title">Aksen Dinding Kayu Teak</h3>
+            <p class="portfolio-desc">Lobby Hotel Butik, Yogyakarta</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item reveal-fade" data-category="decking" id="portfolio-item-6">
+          <img src="assets/pooldeck.png" alt="Decking Teras Luar Kayu Eka Karya">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">Pooldeck & Decking</span>
+            <h3 class="portfolio-title">Outdoor Teras Bengkirai</h3>
+            <p class="portfolio-desc">Modern Penthouse Decking, Jakarta Pusat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimoni" style="background-color: var(--color-muted); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header reveal-fade" id="testimonials-section-hdr">
+        <span class="section-subtitle">Testimoni Klien</span>
+        <h2 class="section-title">Apa Kata Mereka?</h2>
+        <p>Reputasi kami dibangun di atas kepuasan klien kami yang sangat menghargai kualitas kayu tinggi.</p>
+      </div>
+      
+      <div class="testimonials-slider reveal-fade" id="testimonials-carousel">
+        <div class="testimonial-card" id="active-testimonial">
+          <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <blockquote class="testimonial-quote" id="testimonial-quote-text">
+            "Kualitas pengerjaan kusen pintu dari Eka Karya benar-benar presisi. Sudut-sudut sambungan kayu sangat rapi, dan finishing serat kayunya menonjolkan kemewahan jati alami. Sangat direkomendasikan untuk proyek arsitektur kelas atas."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4 id="testimonial-author-name">Ar. Baskoro Hadi</h4>
+              <p id="testimonial-author-title">Principal Architect, Studio Arch-D</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Controls for Carousel -->
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: var(--space-md);">
+          <button id="prev-testi-btn" class="filter-btn" aria-label="Testimoni Sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+          <button id="next-testi-btn" class="filter-btn" aria-label="Testimoni Berikutnya"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section / Hubungi Kami -->
+  <section class="contact-section" id="kontak">
+    <div class="container contact-grid">
+      <div class="contact-info reveal-fade-left" id="contact-details-col">
+        <span class="section-subtitle">Hubungi Kami</span>
+        <h2 class="section-title" style="margin-bottom: var(--space-sm);">Siap Memulai Proyek Kayu Impian Anda?</h2>
+        <p>Silakan berkonsultasi mengenai kebutuhan kusen pintu, plafon lambersering, atau kolam pooldeck Anda. Tim ahli kami siap membantu dari desain hingga pemasangan presisi di lokasi.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-text">
+            <h4>Alamat Workshop & Kantor</h4>
+            <p>Jl. Raya Konstruksi No. 45, Sentra Kerajinan Kayu, Tangerang</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-text">
+            <h4>Telepon & WhatsApp</h4>
+            <p>+62 812-3456-7890 (Konsultasi Cepat)</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-text">
+            <h4>Email Resmi</h4>
+            <p>info@ekakaryakonstruksi.co.id</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-container reveal-fade-right" id="contact-form-wrapper">
+        <form id="quote-request-form">
+          <div class="form-group">
+            <label for="form-name" class="form-label">Nama Lengkap</label>
+            <input type="text" id="form-name" class="form-control" placeholder="Masukkan nama Anda" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-email" class="form-label">Alamat Email</label>
+            <input type="email" id="form-email" class="form-control" placeholder="nama@email.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-phone" class="form-label">Nomor WhatsApp</label>
+            <input type="tel" id="form-phone" class="form-control" placeholder="0812xxxxxxx" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Layanan yang Dibutuhkan</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="services" value="kusen" id="chk-service-kusen"> Kusen & Pintu
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="services" value="lambersering" id="chk-service-panel"> Lambersering
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="services" value="pooldeck" id="chk-service-decking"> Pooldeck Kayu
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="services" value="millwork" id="chk-service-custom"> Custom Millwork
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="form-message" class="form-label">Detail Proyek (Opsional)</label>
+            <textarea id="form-message" class="form-control" placeholder="Tuliskan detail ukuran, jenis kayu, atau lokasi proyek jika ada..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" id="submit-form-btn">
+            Kirim Permintaan Konsultasi <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+        <div id="form-success-message" style="display: none; text-align: center; padding: var(--space-sm); color: var(--color-accent); font-weight: 600;">
+          <i class="fa-solid fa-circle-check" style="font-size: 2rem; margin-bottom: var(--space-xs); display: block;"></i>
+          Terima kasih! Tim Eka Karya Konstruksi akan segera menghubungi Anda melalui WhatsApp dalam 1x24 jam.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Eka Karya Konstruksi</h3>
+        <p class="footer-desc">Berdedikasi untuk melestarikan dan mempercantik hunian Anda lewat sentuhan mahakarya finishing kayu premium terpercaya sejak tahun 2014.</p>
+        <div style="margin-top: 20px; display: flex; gap: 15px;">
+          <a href="#" aria-label="Facebook Eka Karya"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram Eka Karya"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube Eka Karya"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Tautan Cepat</h3>
+        <ul class="footer-links">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#layanan">Layanan Finishing</a></li>
+          <li><a href="#portofolio">Portofolio Proyek</a></li>
+          <li><a href="#filosofi">Filosofi & Kontrol Kualitas</a></li>
+          <li><a href="#kontak">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Jam Operasional</h3>
+        <p class="footer-desc" style="color: white; font-weight: 500;">Workshop & Showroom:</p>
+        <p class="footer-desc" style="margin-top: 5px;">Senin - Sabtu: 08.00 - 17.00 WIB<br>Minggu / Hari Libur: Tutup</p>
+        <p class="footer-desc" style="color: white; font-weight: 500; margin-top: 15px;">Konsultasi Online WhatsApp:</p>
+        <p class="footer-desc" style="margin-top: 5px;">Setiap Hari: 07.00 - 21.00 WIB</p>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; 2026 Eka Karya Konstruksi. Hak Cipta Dilindungi Undang-Undang.</p>
+      <div class="copyright">Designed by Masbroo Studio</div>
+    </div>
+  </footer>
+
+  <!-- GSAP Animation Libraries via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Main Javascript Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

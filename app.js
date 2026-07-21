@@ -180,21 +180,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Hero Section Entrance Timeline (Staggered)
-    const heroTl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 1 } });
+    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
     
-    heroTl.fromTo('.reveal-fade-left', 
-      { opacity: 0, x: -40 }, 
-      { opacity: 1, x: 0, stagger: 0.12, delay: 0.2 }
-    );
-    
-    heroTl.fromTo('.reveal-fade-right', 
-      { opacity: 0, x: 40, scale: 0.96 }, 
-      { opacity: 1, x: 0, scale: 1, duration: 1.2 }, 
-      '-=0.9'
-    );
+    const heroRevealElements = document.querySelectorAll('.hero-section .reveal-fade');
+    if (heroRevealElements.length > 0) {
+      heroTl.fromTo(heroRevealElements,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, stagger: 0.12, delay: 0.15 }
+      );
+    }
 
-    // General Scroll reveals for sections, subtitles, and cards
-    const revealElements = document.querySelectorAll('.reveal-fade');
+    // General Scroll reveals for sections, subtitles, and cards (excluding hero)
+    const revealElements = document.querySelectorAll('.reveal-fade:not(.hero-section .reveal-fade)');
     revealElements.forEach(el => {
       gsap.fromTo(el,
         { opacity: 0, y: 40 },

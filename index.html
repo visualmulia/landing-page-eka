@@ -71,48 +71,124 @@
 
   <!-- Hero Section -->
   <section class="hero-section" id="beranda">
-    <div class="container hero-grid">
-      <div class="hero-content">
-        <div class="hero-tagline reveal-fade-left" id="hero-badge-contractor">
-          <i class="fa-solid fa-certificate"></i> Premium Wood Craftsmanship
+    <div class="container hero-centered-layout">
+      <!-- Logo & Company Name Header -->
+      <div class="hero-header-box reveal-fade">
+        <div class="hero-logo-box">
+          <svg width="90" height="90" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" stroke="var(--color-primary)" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="42" stroke="var(--color-accent)" stroke-width="1" stroke-dasharray="4 4"/>
+            <!-- Abstract modern wood slats structure -->
+            <path d="M28 32 L72 32" stroke="var(--color-primary)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M20 41 L80 41" stroke="var(--color-primary)" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M16 50 L84 50" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round"/>
+            <path d="M20 59 L80 59" stroke="var(--color-primary)" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M28 68 L72 68" stroke="var(--color-primary)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M38 77 L62 77" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
         </div>
-        <h1 class="hero-title reveal-fade-left" id="hero-main-title">
-          Sentuhan Karya <span>Finishing Kayu</span> Untuk Kemewahan Abadi
-        </h1>
-        <p class="hero-desc reveal-fade-left" id="hero-description">
-          Eka Karya Konstruksi menghadirkan keindahan alami kayu pilihan dengan pengerjaan presisi. Spesialis kusen pintu mewah, plafon lambersering modern, dan pooldeck kayu premium tahan cuaca ekstrem.
-        </p>
-        <div class="hero-actions reveal-fade-left" id="hero-actions-container">
-          <a href="#kontak" class="btn btn-primary" id="hero-primary-btn">Mulai Konsultasi <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#portofolio" class="btn btn-secondary" id="hero-secondary-btn">Lihat Karya Kami</a>
+        <div class="hero-brand-name">EKA KARYA KONSTRUKSI</div>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="hero-main-headline reveal-fade">
+        FINISHING KAYU PREMIUM<br>UNTUK RUANG INDAH YANG BERTAHAN LAMA
+      </h1>
+
+      <!-- Divider line with dot -->
+      <div class="hero-decor-divider reveal-fade">
+        <div class="line"></div>
+        <div class="dot"></div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Sub-description -->
+      <p class="hero-centered-desc reveal-fade">
+        Kami mempabrikasi dan memasang pengerjaan kayu berkualitas tinggi, menggabungkan keindahan alami, ketahanan jangka panjang, dan keahlian presisi untuk menghidupkan setiap sudut ruangan Anda.
+      </p>
+
+      <!-- CTA actions -->
+      <div class="hero-centered-actions reveal-fade">
+        <a href="#kontak" class="btn btn-primary">Mulai Konsultasi <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#portofolio" class="btn btn-secondary">Lihat Karya Kami</a>
+      </div>
+
+      <!-- Large Showcase Banner -->
+      <div class="hero-banner-wrapper reveal-fade">
+        <div class="hero-banner-card">
+          <img src="assets/luxury_wood_interior.png" alt="Interior Showroom Kayu Premium Eka Karya Konstruksi" class="hero-banner-img">
         </div>
-        
-        <div class="hero-stats reveal-fade-left" id="hero-statistics">
-          <div class="stat-item">
-            <h3 id="stat-experience">12+</h3>
-            <p>Tahun Pengalaman</p>
+      </div>
+
+      <!-- Feature Badges Grid (5 items) -->
+      <div class="hero-features-grid reveal-fade">
+        <div class="feature-badge-item">
+          <div class="f-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h4>KUALITAS PREMIUM</h4>
+          <p>Kayu jati & merbau pilihan dengan kadar air (MC) rendah.</p>
+        </div>
+        <div class="feature-badge-item">
+          <div class="f-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>TAHAN LAMA</h4>
+          <p>Proteksi cuaca luar ruangan & lapisan anti rayap tangguh.</p>
+        </div>
+        <div class="feature-badge-item">
+          <div class="f-icon"><i class="fa-solid fa-hammer"></i></div>
+          <h4>PEMASANGAN AHLI</h4>
+          <p>Pabrikasi & pemasangan presisi milimeter oleh profesional.</p>
+        </div>
+        <div class="feature-badge-item">
+          <div class="f-icon"><i class="fa-solid fa-swatchbook"></i></div>
+          <h4>PILIHAN VARIATIF</h4>
+          <p>Tersedia ulin, teak, merbau, kamper, & bengkirai.</p>
+        </div>
+        <div class="feature-badge-item">
+          <div class="f-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h4>RAMAH LINGKUNGAN</h4>
+          <p>Bahan kayu legal bersertifikat resmi (SVLK/FSC).</p>
+        </div>
+      </div>
+
+      <!-- Wood Swatches Row -->
+      <div class="hero-swatches-box reveal-fade">
+        <div class="swatches-title">Pilihan Karakter Kayu Utama</div>
+        <div class="swatches-flex">
+          <div class="swatch-item">
+            <div class="swatch-circle teak-wood"></div>
+            <span>JATI SOLID</span>
           </div>
-          <div class="stat-item">
-            <h3 id="stat-projects">350+</h3>
-            <p>Proyek Selesai</p>
+          <div class="swatch-item">
+            <div class="swatch-circle ulin-wood"></div>
+            <span>ULIN TIMBER</span>
           </div>
-          <div class="stat-item">
-            <h3 id="stat-satisfaction">98%</h3>
-            <p>Klien Puas</p>
+          <div class="swatch-item">
+            <div class="swatch-circle merbau-wood"></div>
+            <span>MERBAU</span>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-circle kamper-wood"></div>
+            <span>KAMPER</span>
+          </div>
+          <div class="swatch-item">
+            <div class="swatch-circle bengkirai-wood"></div>
+            <span>BENGKIRAI</span>
           </div>
         </div>
       </div>
-      
-      <div class="hero-image-wrapper reveal-fade-right" id="hero-showcase-wrapper">
-        <div class="hero-image-container" id="hero-showcase-card">
-          <img src="assets/hero_wood.png" alt="Finishing Teak Wood Premium Eka Karya Konstruksi" class="hero-image" id="hero-main-img">
-          <div class="hero-badge" id="hero-quality-badge">
-            <div class="hero-badge-icon"><i class="fa-solid fa-award"></i></div>
-            <div class="hero-badge-text">
-              <h4>Kayu Pilihan Terbaik</h4>
-              <p>Hanya menggunakan Jati & Merbau bersertifikasi</p>
-            </div>
-          </div>
+
+      <!-- Ideal Spaces Footer Info -->
+      <div class="hero-spaces-info reveal-fade">
+        <div class="spaces-title">IDEAL UNTUK SETIAP RUANG</div>
+        <div class="spaces-list">
+          <span>VILA</span>
+          <span class="sep">|</span>
+          <span>APARTEMEN</span>
+          <span class="sep">|</span>
+          <span>PERKANTORAN</span>
+          <span class="sep">|</span>
+          <span>KOMERSIAL</span>
+          <span class="sep">|</span>
+          <span>RESOR</span>
         </div>
       </div>
     </div>

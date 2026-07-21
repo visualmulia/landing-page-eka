@@ -230,5 +230,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       );
     });
+
+    // Footer Spotlight cursor tracking
+    const footer = document.querySelector('footer.site-footer');
+    const footerGlow = document.getElementById('footer-spotlight');
+    if (footer && footerGlow) {
+      footer.addEventListener('mousemove', (e) => {
+        const rect = footer.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        gsap.to(footerGlow, {
+          left: x,
+          top: y,
+          opacity: 1,
+          duration: 0.5,
+          ease: 'power2.out'
+        });
+      });
+
+      footer.addEventListener('mouseleave', () => {
+        gsap.to(footerGlow, {
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power2.out'
+        });
+      });
+    }
   }
 });

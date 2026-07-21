@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   /* Color Palette - Earthy Warm Premium Gold */
@@ -18,8 +18,8 @@
   --glass-accent-border: rgba(161, 98, 7, 0.2);
   --glass-blur: 16px;
 
-  /* Typography - Luxury Cormorant Garamond & Clean Inter */
-  --font-title: 'Cormorant Garamond', serif;
+  /* Typography - Sturdy Syne & Clean Inter */
+  --font-title: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
@@ -66,7 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-title);
   color: var(--color-primary);
   line-height: 1.15;
-  font-weight: 500;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -394,10 +395,11 @@ header.site-header.scrolled .nav-container {
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: var(--space-md);
   color: var(--color-primary);
   line-height: 1.1;
+  letter-spacing: -0.03em;
 }
 
 @media (min-width: 768px) {
@@ -407,13 +409,13 @@ header.site-header.scrolled .nav-container {
 }
 
 .hero-title span {
-  font-style: italic; /* Luxury serif italic touch */
+  font-style: normal;
   color: var(--color-accent);
-  background: linear-gradient(135deg, var(--color-accent), #78350f);
+  background: linear-gradient(135deg, var(--color-accent), #b45309);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .hero-desc {
@@ -555,9 +557,10 @@ header.site-header.scrolled .nav-container {
 
 .section-title {
   font-size: 2.6rem;
-  font-weight: 500;
+  font-weight: 800;
   margin-bottom: var(--space-sm);
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 @media (min-width: 768px) {
@@ -567,8 +570,9 @@ header.site-header.scrolled .nav-container {
 }
 
 .section-title span {
-  font-style: italic;
+  font-style: normal;
   color: var(--color-accent);
+  font-weight: 800;
 }
 
 /* Services Section */

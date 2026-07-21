@@ -31,9 +31,17 @@
   --space-xl: 4rem;     /* 64px */
   
   --border-radius: 16px;
-  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-fast: all 0.2s ease;
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: all 0.15s ease;
 }
+
+@media (min-width: 1024px) {
+  :root {
+    --space-xl: 7.5rem;   /* 120px - majestic desktop breathing room */
+    --space-lg: 3.5rem;   /* 56px */
+  }
+}
+
 
 /* Reset and Base Styles */
 *, *::before, *::after {
@@ -458,6 +466,7 @@ header.site-header.scrolled .nav-container {
   box-shadow: 0 30px 60px rgba(28, 25, 23, 0.08), 0 0 0 1px rgba(161, 98, 7, 0.1);
   position: relative;
   overflow: hidden;
+  transition: var(--transition-smooth);
 }
 
 .hero-image {
@@ -468,8 +477,14 @@ header.site-header.scrolled .nav-container {
   transition: var(--transition-smooth);
 }
 
+.hero-image-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 35px 70px rgba(161, 98, 7, 0.12), 0 0 0 1px rgba(161, 98, 7, 0.35);
+  border-color: var(--color-accent);
+}
+
 .hero-image-container:hover .hero-image {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .hero-badge {
@@ -517,11 +532,18 @@ header.site-header.scrolled .nav-container {
 /* Quick Stats Row */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
   margin-top: var(--space-lg);
   border-top: 1px solid var(--color-border);
   padding-top: var(--space-md);
+}
+
+@media (min-width: 480px) {
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
 }
 
 .stat-item h3 {
@@ -607,8 +629,8 @@ header.site-header.scrolled .nav-container {
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(28, 25, 23, 0.04);
-  border-color: var(--glass-accent-border);
+  box-shadow: 0 25px 50px rgba(161, 98, 7, 0.08), 0 0 0 1px rgba(161, 98, 7, 0.25);
+  border-color: var(--color-accent);
 }
 
 .service-image-container {

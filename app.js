@@ -31,38 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- 3. Dark/Light Theme Switcher ---
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeToggleMobile = document.getElementById('theme-toggle-mobile');
-  const themeIcon = document.getElementById('theme-icon');
-  
-  const getTheme = () => localStorage.getItem('theme') || 'light';
-  const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    
-    // Update Icons
-    if (themeIcon) {
-      if (theme === 'dark') {
-        themeIcon.className = 'fa-solid fa-sun';
-      } else {
-        themeIcon.className = 'fa-solid fa-moon';
-      }
-    }
-  };
-
-  // Initialize Theme
-  setTheme(getTheme());
-
-  const toggleThemeHandler = () => {
-    const currentTheme = getTheme();
-    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-  };
-
-  if (themeToggle) themeToggle.addEventListener('click', toggleThemeHandler);
-  if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleThemeHandler);
-
-  // --- 4. Portfolio Filter System ---
+  // --- 3. Portfolio Filter System ---
   const filterButtons = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -77,14 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
       portfolioItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         
-        // Custom scale/fade out and in transition
         if (filterValue === 'all' || itemCategory === filterValue) {
+          // Animate items coming back
           item.style.display = 'block';
           gsap.fromTo(item, 
             { opacity: 0, scale: 0.8 }, 
-            { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out', clearProps: 'all' }
+            { opacity: 1, scale: 1, duration: 0.4, ease: 'power2.out', clearProps: 'transform,opacity' }
           );
         } else {
+          // Animate items going away
           gsap.to(item, {
             opacity: 0,
             scale: 0.8,
@@ -99,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 5. Testimonial Slider System ---
+  // --- 4. Testimonial Slider System ---
   const testimonials = [
     {
       quote: "Kualitas pengerjaan kusen pintu dari Eka Karya benar-benar presisi. Sudut-sudut sambungan kayu sangat rapi, dan finishing serat kayunya menonjolkan kemewahan jati alami. Sangat direkomendasikan untuk proyek arsitektur kelas atas.",
@@ -160,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 6. Form Submission Handling ---
+  // --- 5. Form Submission Handling ---
   const contactForm = document.getElementById('quote-request-form');
   const successMessage = document.getElementById('form-success-message');
 
@@ -185,55 +155,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 7. GSAP ScrollTrigger Animations ---
-  // Ensure GSAP and ScrollTrigger are loaded
+  // --- 6. GSAP ScrollTrigger Animations ---
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Dynamic ambient light cursor effect
+    // Mouse-move ambient blob light glow effect
     window.addEventListener('mousemove', (e) => {
       const blob1 = document.getElementById('ambient-blob-1');
       const blob2 = document.getElementById('ambient-blob-2');
       if (blob1 && blob2) {
         gsap.to(blob1, {
-          x: (e.clientX - window.innerWidth / 2) * 0.1,
-          y: (e.clientY - window.innerHeight / 2) * 0.1,
-          duration: 2,
+          x: (e.clientX - window.innerWidth / 2) * 0.08,
+          y: (e.clientY - window.innerHeight / 2) * 0.08,
+          duration: 1.5,
           ease: 'power1.out'
         });
         gsap.to(blob2, {
-          x: (e.clientX - window.innerWidth / 2) * -0.05,
-          y: (e.clientY - window.innerHeight / 2) * -0.05,
-          duration: 2,
+          x: (e.clientX - window.innerWidth / 2) * -0.04,
+          y: (e.clientY - window.innerHeight / 2) * -0.04,
+          duration: 1.5,
           ease: 'power1.out'
         });
       }
     });
 
-    // Hero Section Animations
-    const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.8 } });
+    // Hero Section Entrance Timeline (Staggered)
+    const heroTl = gsap.timeline({ defaults: { ease: 'power4.out', duration: 1 } });
     
     heroTl.fromTo('.reveal-fade-left', 
-      { opacity: 0, x: -30 }, 
-      { opacity: 1, x: 0, stagger: 0.15, delay: 0.2 }
+      { opacity: 0, x: -40 }, 
+      { opacity: 1, x: 0, stagger: 0.12, delay: 0.2 }
     );
     
     heroTl.fromTo('.reveal-fade-right', 
-      { opacity: 0, x: 30, scale: 0.95 }, 
-      { opacity: 1, x: 0, scale: 1, duration: 1 }, 
-      '-=0.8'
+      { opacity: 0, x: 40, scale: 0.96 }, 
+      { opacity: 1, x: 0, scale: 1, duration: 1.2 }, 
+      '-=0.9'
     );
 
-    // Scroll Reveal for sections and cards
+    // General Scroll reveals for sections, subtitles, and cards
     const revealElements = document.querySelectorAll('.reveal-fade');
     revealElements.forEach(el => {
       gsap.fromTo(el,
-        { opacity: 0, y: 30 },
+        { opacity: 0, y: 40 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
+          duration: 1,
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',
@@ -243,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     });
 
-    // Scroll Reveal for elements coming from left
+    // Left slide in scroll reveals
     const revealLeft = document.querySelectorAll('.reveal-fade-left-scroll');
     revealLeft.forEach(el => {
       gsap.fromTo(el,
@@ -251,8 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           opacity: 1,
           x: 0,
-          duration: 0.8,
-          ease: 'power2.out',
+          duration: 1,
+          ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
             start: 'top 85%',

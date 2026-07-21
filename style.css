@@ -365,12 +365,28 @@ header.site-header.scrolled .nav-container {
 
 /* Hero Section */
 .hero-section {
-  padding-top: 160px;
+  padding-top: 180px;
   padding-bottom: var(--space-xl);
   min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
+  background-image: url('assets/luxury_wood_interior.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(12, 10, 9, 0.8) 0%, rgba(12, 10, 9, 0.65) 50%, rgba(12, 10, 9, 0.85) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-centered-layout {
@@ -378,17 +394,10 @@ header.site-header.scrolled .nav-container {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding-top: var(--space-md);
-}
-
-.hero-header-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: var(--space-md);
+  position: relative;
+  z-index: 2;
 }
 
 .hero-logo-box {
@@ -398,12 +407,28 @@ header.site-header.scrolled .nav-container {
   margin-bottom: 5px;
 }
 
+.hero-logo-box svg circle {
+  stroke: #ffffff;
+}
+
+.hero-logo-box svg circle[stroke-dasharray] {
+  stroke: var(--color-accent);
+}
+
+.hero-logo-box svg path {
+  stroke: #ffffff;
+}
+
+.hero-logo-box svg path[stroke="var(--color-accent)"] {
+  stroke: var(--color-accent);
+}
+
 .hero-brand-name {
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 3px;
-  color: var(--color-secondary);
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
 }
 
@@ -413,14 +438,15 @@ header.site-header.scrolled .nav-container {
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 0.05em;
-  color: var(--color-primary);
-  margin-bottom: var(--space-sm);
+  color: #ffffff;
+  margin-bottom: var(--space-xs);
   max-width: 900px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 768px) {
   .hero-main-headline {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 }
 
@@ -431,13 +457,13 @@ header.site-header.scrolled .nav-container {
   gap: 15px;
   width: 100%;
   max-width: 250px;
-  margin: var(--space-sm) 0 var(--space-md);
+  margin: var(--space-sm) auto var(--space-md);
 }
 
 .hero-decor-divider .line {
   flex: 1;
   height: 1px;
-  background-color: var(--color-border);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .hero-decor-divider .dot {
@@ -445,14 +471,16 @@ header.site-header.scrolled .nav-container {
   height: 6px;
   background-color: var(--color-accent);
   border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-accent);
 }
 
 .hero-centered-desc {
   font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--color-secondary);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 720px;
   margin-bottom: var(--space-lg);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero-centered-actions {
@@ -471,26 +499,17 @@ header.site-header.scrolled .nav-container {
   }
 }
 
-/* Showcase Banner Card */
-.hero-banner-wrapper {
-  width: 100%;
-  margin-bottom: var(--space-xl);
-  position: relative;
+.hero-centered-actions .btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
 }
 
-.hero-banner-card {
-  width: 100%;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid var(--glass-accent-border);
-  box-shadow: 0 35px 70px rgba(28, 25, 23, 0.08), 0 0 0 1px rgba(161, 98, 7, 0.1);
-  transition: var(--transition-smooth);
-}
-
-.hero-banner-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 45px 80px rgba(161, 98, 7, 0.15), 0 0 0 1px rgba(161, 98, 7, 0.35);
-  border-color: var(--color-accent);
+.hero-centered-actions .btn-secondary:hover {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  border-color: #ffffff;
 }
 
 .hero-banner-img {
@@ -507,9 +526,6 @@ header.site-header.scrolled .nav-container {
   grid-template-columns: 1fr;
   gap: var(--space-md);
   width: 100%;
-  margin-bottom: var(--space-xl);
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: var(--space-lg);
 }
 
 @media (min-width: 480px) {
@@ -531,6 +547,7 @@ header.site-header.scrolled .nav-container {
   align-items: center;
   padding: 10px;
   transition: var(--transition-fast);
+  text-align: center;
 }
 
 .feature-badge-item .f-icon {
@@ -555,6 +572,14 @@ header.site-header.scrolled .nav-container {
   line-height: 1.5;
 }
 
+/* Why Choose Us Section Container */
+.features-section {
+  background-color: var(--color-muted);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
 /* Wood Swatches styles */
 .hero-swatches-box {
   width: 100%;
@@ -570,7 +595,7 @@ header.site-header.scrolled .nav-container {
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--color-secondary);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: var(--space-md);
 }
 
@@ -589,11 +614,11 @@ header.site-header.scrolled .nav-container {
 }
 
 .swatch-circle {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 8px;
-  border: 1px solid var(--color-border);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   transition: var(--transition-fast);
   cursor: pointer;
 }
@@ -601,12 +626,13 @@ header.site-header.scrolled .nav-container {
 .swatch-circle:hover {
   transform: scale(1.08);
   border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(161, 98, 7, 0.35);
 }
 
 .swatch-item span {
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-secondary);
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.5px;
 }
 
@@ -631,12 +657,11 @@ header.site-header.scrolled .nav-container {
   background: linear-gradient(135deg, #d97706 0%, #a16207 100%);
 }
 
-/* Spaces Info styles */
 .hero-spaces-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   width: 100%;
   padding-top: var(--space-md);
 }
@@ -659,12 +684,12 @@ header.site-header.scrolled .nav-container {
   font-family: var(--font-title);
   font-size: 1.15rem;
   letter-spacing: 1px;
-  color: var(--color-primary);
+  color: #ffffff;
   font-weight: 600;
 }
 
 .spaces-list span.sep {
-  color: var(--color-border);
+  color: rgba(255, 255, 255, 0.3);
   font-family: var(--font-body);
   font-weight: 300;
 }

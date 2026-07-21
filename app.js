@@ -210,10 +210,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Left slide in scroll reveals
-    const revealLeft = document.querySelectorAll('.reveal-fade-left-scroll');
+    const revealLeft = document.querySelectorAll('.reveal-fade-left');
     revealLeft.forEach(el => {
       gsap.fromTo(el,
         { opacity: 0, x: -40 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
+    });
+
+    // Right slide in scroll reveals
+    const revealRight = document.querySelectorAll('.reveal-fade-right');
+    revealRight.forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, x: 40 },
         {
           opacity: 1,
           x: 0,

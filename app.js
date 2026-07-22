@@ -161,25 +161,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Mouse-move ambient blob light glow effect
-    window.addEventListener('mousemove', (e) => {
-      const blob1 = document.getElementById('ambient-blob-1');
-      const blob2 = document.getElementById('ambient-blob-2');
-      if (blob1 && blob2) {
-        gsap.to(blob1, {
-          x: (e.clientX - window.innerWidth / 2) * 0.08,
-          y: (e.clientY - window.innerHeight / 2) * 0.08,
-          duration: 1.5,
-          ease: 'power1.out'
-        });
-        gsap.to(blob2, {
-          x: (e.clientX - window.innerWidth / 2) * -0.04,
-          y: (e.clientY - window.innerHeight / 2) * -0.04,
-          duration: 1.5,
-          ease: 'power1.out'
-        });
-      }
-    });
+    // Mouse-move ambient blob light glow effect (Desktop fine pointers only)
+    if (window.matchMedia('(pointer: fine)').matches) {
+      window.addEventListener('mousemove', (e) => {
+        const blob1 = document.getElementById('ambient-blob-1');
+        const blob2 = document.getElementById('ambient-blob-2');
+        if (blob1 && blob2) {
+          gsap.to(blob1, {
+            x: (e.clientX - window.innerWidth / 2) * 0.08,
+            y: (e.clientY - window.innerHeight / 2) * 0.08,
+            duration: 1.5,
+            ease: 'power1.out'
+          });
+          gsap.to(blob2, {
+            x: (e.clientX - window.innerWidth / 2) * -0.04,
+            y: (e.clientY - window.innerHeight / 2) * -0.04,
+            duration: 1.5,
+            ease: 'power1.out'
+          });
+        }
+      });
+    }
 
     // Hero Section Entrance Timeline (Staggered)
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });

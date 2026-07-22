@@ -341,6 +341,12 @@ header.site-header.scrolled .nav-container {
   animation: morph 25s infinite alternate;
 }
 
+@media (max-width: 768px) {
+  .ambient-light, .blob {
+    display: none !important;
+  }
+}
+
 .blob-1 {
   width: 600px;
   height: 600px;
@@ -368,11 +374,20 @@ header.site-header.scrolled .nav-container {
   padding-top: 180px;
   padding-bottom: var(--space-xl);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 130px;
+    padding-bottom: var(--space-lg);
+    min-height: auto;
+  }
 }
 
 .hero-slider {
@@ -395,6 +410,10 @@ header.site-header.scrolled .nav-container {
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  will-change: opacity;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .hero-slide.active {

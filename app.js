@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- 3. Portfolio Filter System ---
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const filterButtons = document.querySelectorAll('.portfolio-filters .filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
 
   filterButtons.forEach(button => {
@@ -119,12 +119,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   if (prevBtn && nextBtn) {
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
       updateTestimonial(currentTestimonialIndex);
     });
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
       updateTestimonial(currentTestimonialIndex);
     });

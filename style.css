@@ -933,7 +933,7 @@ header.site-header.scrolled .nav-container {
   margin-bottom: var(--space-xl);
 }
 
-.filter-btn {
+.filter-btn, .testi-btn {
   background: transparent;
   border: 1px solid var(--color-border);
   padding: 8px 24px;
@@ -946,7 +946,7 @@ header.site-header.scrolled .nav-container {
   letter-spacing: 0.5px;
 }
 
-.filter-btn.active, .filter-btn:hover {
+.filter-btn.active, .filter-btn:hover, .testi-btn:hover {
   background-color: var(--color-primary);
   color: white;
   border-color: var(--color-primary);

@@ -371,11 +371,34 @@ header.site-header.scrolled .nav-container {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url('assets/luxury_wood_interior.png');
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.hero-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #ffffff;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
 }
 
 .hero-overlay {

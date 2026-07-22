@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 1. Mobile Menu Toggle ---
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileMenu = document.getElementById('mobile-nav-menu');
-  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+  const mobileMenuLinks = document.querySelectorAll('#mobile-nav-menu a');
 
   if (mobileToggle && mobileMenu) {
     mobileToggle.addEventListener('click', () => {

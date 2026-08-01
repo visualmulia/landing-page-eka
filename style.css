@@ -399,8 +399,8 @@ header.site-header.scrolled .nav-container {
 .hero-section {
   padding-top: 180px;
   padding-bottom: var(--space-xl);
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 80vh;
+  min-height: 80dvh;
   display: flex;
   align-items: center;
   position: relative;
@@ -555,7 +555,7 @@ header.site-header.scrolled .nav-container {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  margin-bottom: var(--space-xl);
+  margin-bottom: 0;
   width: 100%;
   max-width: 480px;
   justify-content: center;

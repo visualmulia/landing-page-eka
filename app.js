@@ -72,12 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- 4. Testimonial Slider System ---
   const testimonials = [
     {
-      quote: "Kualitas pengerjaan kusen pintu dari Eka Karya benar-benar presisi. Sudut-sudut sambungan kayu sangat rapi, dan finishing serat kayunya menonjolkan kemewahan jati alami. Sangat direkomendasikan untuk proyek arsitektur kelas atas.",
+      quote: "Kualitas pengerjaan kusen pintu dari Pak Eka benar-benar presisi. Sudut-sudut sambungan kayu sangat rapi, dan finishing serat kayunya menonjolkan kemewahan jati alami. Sangat direkomendasikan untuk proyek arsitektur kelas atas.",
       author: "Ar. Baskoro Hadi",
       title: "Principal Architect, Studio Arch-D"
     },
     {
-      quote: "Pooldeck kayu ulin yang dipasang di kolam renang villa kami di Ubud sampai sekarang tetap kokoh dan warnanya makin eksotis setelah di-coating berkala oleh Eka Karya. Kerja mereka cepat, bersih, dan profesional.",
+      quote: "Pooldeck kayu ulin yang dipasang di kolam renang villa kami di Ubud sampai sekarang tetap kokoh dan warnanya makin eksotis setelah di-coating berkala oleh Pak Eka. Kerja tim beliau cepat, bersih, dan profesional.",
       author: "Ibu Kadek Wulandari",
       title: "Owner, Wulan Tropical Villas Bali"
     },

@@ -506,9 +506,59 @@
     </div>
     
     <div class="container footer-bottom">
-      <p class="copyright">&copy; 2026 Eka Karya Konstruksi. Hak Cipta Dilindungi Undang-Undang.</p>
+      <p class="copyright">&copy; 2026 Eka Konstruksi. Hak Cipta Dilindungi Undang-Undang.</p>
     </div>
   </footer>
+
+  <!-- Portfolio Showcase Modal Popup -->
+  <div class="modal-overlay" id="showcaseModal">
+    <div class="showcase-modal-box">
+      <button class="modal-close" id="showcaseClose" aria-label="Close Modal">&times;</button>
+      
+      <!-- Left Column: Image & Carousel Controls -->
+      <div class="showcase-modal-left">
+        <div class="showcase-img-container">
+          <button class="carousel-nav-btn prev-btn" id="scPrevBtn" aria-label="Previous Slide">‹</button>
+          <img id="scMainImg" src="" alt="Showcase Preview" class="showcase-main-img" />
+          <button class="carousel-nav-btn next-btn" id="scNextBtn" aria-label="Next Slide">›</button>
+        </div>
+        <div class="showcase-carousel-dots" id="scDotsContainer"></div>
+      </div>
+
+      <!-- Right Column: Details & Metrics -->
+      <div class="showcase-modal-right">
+        <div>
+          <div class="showcase-tag-row">
+            <span class="showcase-badge" id="scBadge">Kusen & Pintu</span>
+            <span class="showcase-year" id="scYear">2026</span>
+          </div>
+
+          <h3 class="showcase-title" id="scTitle">Pintu Utama Jati Solid</h3>
+          <p class="showcase-desc" id="scDesc">
+            Pintu utama rumah tinggal premium dengan material kayu Jati Jawa Tengah pilihan...
+          </p>
+        </div>
+
+        <div>
+          <div class="showcase-metrics-grid">
+            <div>
+              <div class="metric-val" id="scVal1">Jati</div>
+              <div class="metric-lbl" id="scLbl1">Karakter Kayu</div>
+            </div>
+            <div>
+              <div class="metric-val" id="scVal2">Solid</div>
+              <div class="metric-lbl" id="scLbl2">Sistem Struktur</div>
+            </div>
+          </div>
+
+          <button id="scWaBtn" class="btn btn-dark" style="width: 100%; font-size: 0.95rem; padding: 0.85rem; background-color: var(--color-primary); color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 30px; cursor: pointer;">
+            <span>💬 Hubungi via WhatsApp</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- GSAP Animation Libraries via CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

@@ -288,5 +288,241 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
       }, 5000);
     }
+    // --- 7. Portfolio Lightbox Modal (popup & slider) ---
+    const portfolioData = {
+      'portfolio-item-1': {
+        title: 'Pintu Utama Jati Solid',
+        category: 'Kusen & Pintu',
+        year: '2026',
+        images: [
+          'assets/door_frame.png',
+          'assets/woodwork_factory.png',
+          'assets/hero_wood.png'
+        ],
+        desc: 'Pintu utama rumah tinggal premium dengan material kayu Jati Jawa Tengah pilihan. Dibuat menggunakan teknik purus tembus dan di-finishing dengan sanding sealer berkualitas tinggi untuk ketahanan cuaca luar ruangan.',
+        metricVal1: 'Jati',
+        metricLbl1: 'Karakter Kayu',
+        metricVal2: 'Solid',
+        metricLbl2: 'Sistem Struktur'
+      },
+      'portfolio-item-2': {
+        title: 'Plafon Kayu Kamper',
+        category: 'Lambersering',
+        year: '2026',
+        images: [
+          'assets/lambersering.png',
+          'assets/luxury_wood_interior.png',
+          'assets/luxury_wood_bedroom.png'
+        ],
+        desc: 'Instalasi langit-langit panel kayu kamper (lambersering) bermotif garis lurus natural. Di-finishing menggunakan warna satin teak dengan coating anti air untuk mencegah deformasi akibat kelembapan atap.',
+        metricVal1: 'Kamper',
+        metricLbl1: 'Karakter Kayu',
+        metricVal2: 'Satin',
+        metricLbl2: 'Tingkat Gloss'
+      },
+      'portfolio-item-3': {
+        title: 'Pooldeck Kayu Ulin',
+        category: 'Pooldeck & Decking',
+        year: '2026',
+        images: [
+          'assets/pooldeck.png',
+          'assets/luxury_wood_decking.png'
+        ],
+        desc: 'Decking area kolam renang menggunakan kayu ulin Kalimantan grade ekspor. Kayu ulin dipasang dengan sekrup stainless steel tersembunyi, di-sanding presisi, dan diberi lapisan decking oil alami untuk ketahanan cuaca ekstrem.',
+        metricVal1: 'Ulin',
+        metricLbl1: 'Karakter Kayu',
+        metricVal2: 'SNI',
+        metricLbl2: 'Uji Kekuatan'
+      },
+      'portfolio-item-4': {
+        title: 'Finishing Clear Gloss Teak',
+        category: 'Kusen & Pintu',
+        year: '2026',
+        images: [
+          'assets/hero_wood.png',
+          'assets/door_frame.png'
+        ],
+        desc: 'Pekerjaan refinishing kusen jendela kayu jati tua pada hunian kolonial. Pengamplasan total hingga serat asli terlihat, diikuti pelapisan polyurethane clear gloss premium untuk perlindungan UV maksimal.',
+        metricVal1: 'Jati Tua',
+        metricLbl1: 'Karakter Kayu',
+        metricVal2: 'Gloss',
+        metricLbl2: 'Tingkat Gloss'
+      },
+      'portfolio-item-5': {
+        title: 'Aksen Dinding Kayu Teak',
+        category: 'Lambersering',
+        year: '2026',
+        images: [
+          'assets/lambersering.png',
+          'assets/luxury_wood_interior.png'
+        ],
+        desc: 'Pekerjaan wall paneling kustom pada lobby resor. Menggabungkan bilah kayu jati solid dengan pola asimetris modern untuk menciptakan aksen visual ruangan yang hangat dan mewah.',
+        metricVal1: 'Teak',
+        metricLbl1: 'Karakter Kayu',
+        metricVal2: 'Resor',
+        metricLbl2: 'Tipe Proyek'
+      },
+      'portfolio-item-6': {
+        title: 'Outdoor Teras Bengkirai',
+        category: 'Pooldeck & Decking',
+        year: '2026',
+        images: [
+          'assets/pooldeck.png',
+          'assets/luxury_wood_decking.png'
+        ],
+        desc: 'Decking teras balkon luar ruangan dengan kayu bengkirai yang kokoh dan tahan lama. Dipasang dengan finishing anti-slip bertingkat untuk menunjang keamanan di area rawan basah.',
+        metricVal1: 'Bengkirai',
+        metricLbl1: 'Karakter Kayu',
+        metricVal2: 'Anti-Slip',
+        metricLbl2: 'Sistem Struktur'
+      }
+    };
+
+    const showcaseModal = document.getElementById('showcaseModal');
+    const showcaseClose = document.getElementById('showcaseClose');
+    const scPrevBtn = document.getElementById('scPrevBtn');
+    const scNextBtn = document.getElementById('scNextBtn');
+    const scMainImg = document.getElementById('scMainImg');
+    const scDotsContainer = document.getElementById('scDotsContainer');
+    const scBadge = document.getElementById('scBadge');
+    const scYear = document.getElementById('scYear');
+    const scTitle = document.getElementById('scTitle');
+    const scDesc = document.getElementById('scDesc');
+    const scVal1 = document.getElementById('scVal1');
+    const scLbl1 = document.getElementById('scLbl1');
+    const scVal2 = document.getElementById('scVal2');
+    const scLbl2 = document.getElementById('scLbl2');
+    const scWaBtn = document.getElementById('scWaBtn');
+
+    let currentItemData = null;
+    let currentSlideIndex = 0;
+
+    // Attach click events to static portfolio items
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const itemId = item.getAttribute('id');
+        const data = portfolioData[itemId];
+        if (data) {
+          openModal(data);
+        }
+      });
+    });
+
+    function openModal(data) {
+      currentItemData = data;
+      currentSlideIndex = 0;
+
+      // Preload images in background
+      if (data.images && Array.isArray(data.images)) {
+        data.images.forEach(src => {
+          const preImg = new Image();
+          preImg.src = src;
+        });
+      }
+
+      // Populate modal content
+      scBadge.textContent = data.category;
+      scYear.textContent = data.year;
+      scTitle.textContent = data.title;
+      scDesc.innerHTML = data.desc;
+      scVal1.textContent = data.metricVal1;
+      scLbl1.textContent = data.metricLbl1;
+      scVal2.textContent = data.metricVal2;
+      scLbl2.textContent = data.metricLbl2;
+
+      renderCarousel();
+      if (showcaseModal) showcaseModal.classList.add('active');
+    }
+
+    function renderCarousel() {
+      if (!currentItemData) return;
+      const images = currentItemData.images || [];
+      scMainImg.src = images[currentSlideIndex] || images[0];
+
+      scDotsContainer.innerHTML = '';
+      if (images.length > 1) {
+        if (scPrevBtn) scPrevBtn.style.display = 'flex';
+        if (scNextBtn) scNextBtn.style.display = 'flex';
+        scDotsContainer.style.display = 'flex';
+
+        images.forEach((_, idx) => {
+          const dot = document.createElement('div');
+          dot.className = `dot-item ${idx === currentSlideIndex ? 'active' : ''}`;
+          dot.addEventListener('click', () => {
+            currentSlideIndex = idx;
+            renderCarousel();
+          });
+          scDotsContainer.appendChild(dot);
+        });
+      } else {
+        if (scPrevBtn) scPrevBtn.style.display = 'none';
+        if (scNextBtn) scNextBtn.style.display = 'none';
+        scDotsContainer.style.display = 'none';
+      }
+    }
+
+    function nextSlide() {
+      if (!currentItemData) return;
+      const images = currentItemData.images || [];
+      if (images.length <= 1) return;
+      currentSlideIndex = (currentSlideIndex + 1) % images.length;
+      renderCarousel();
+    }
+
+    function prevSlide() {
+      if (!currentItemData) return;
+      const images = currentItemData.images || [];
+      if (images.length <= 1) return;
+      currentSlideIndex = (currentSlideIndex - 1 + images.length) % images.length;
+      renderCarousel();
+    }
+
+    if (scNextBtn) scNextBtn.addEventListener('click', (e) => { e.stopPropagation(); nextSlide(); });
+    if (scPrevBtn) scPrevBtn.addEventListener('click', (e) => { e.stopPropagation(); prevSlide(); });
+    if (scMainImg) scMainImg.addEventListener('click', () => { nextSlide(); });
+
+    // Close actions
+    if (showcaseClose && showcaseModal) {
+      showcaseClose.addEventListener('click', () => {
+        showcaseModal.classList.remove('active');
+      });
+
+      showcaseModal.addEventListener('click', (e) => {
+        if (e.target === showcaseModal) {
+          showcaseModal.classList.remove('active');
+        }
+      });
+    }
+
+    // Touch Swipe Gesture for Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const modalLeft = document.querySelector('.showcase-modal-left');
+
+    if (modalLeft) {
+      modalLeft.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      modalLeft.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchEndX - touchStartX;
+        if (Math.abs(diff) > 35) {
+          if (diff < 0) nextSlide();
+          else prevSlide();
+        }
+      }, { passive: true });
+    }
+
+    // WA button trigger
+    if (scWaBtn) {
+      scWaBtn.addEventListener('click', () => {
+        if (currentItemData) {
+          const number = '6281236090490';
+          const text = encodeURIComponent(`Halo Eka Konstruksi, saya tertarik dengan proyek "${currentItemData.title}" (${currentItemData.category}) dan ingin berkonsultasi mengenai detail serupa.`);
+          window.open(`https://wa.me/${number}?text=${text}`, '_blank');
+        }
+      });
+    }
   }
 });

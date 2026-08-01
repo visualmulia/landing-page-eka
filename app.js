@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       portfolioItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         
-        if (filterValue === 'all' || itemCategory === filterValue) {
+        if (filterValue === 'all' || itemCategory.split(' ').includes(filterValue)) {
           // Animate items coming back
           item.style.display = 'block';
           gsap.fromTo(item, 
@@ -291,19 +291,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 7. Portfolio Lightbox Modal (popup & slider) ---
     const portfolioData = {
       'portfolio-item-1': {
-        title: 'Pintu Utama Jati Solid',
-        category: 'Kusen & Pintu',
+        title: 'Villa Alaya - Petitenget, Bali',
+        category: 'Pooldeck, Lambersering & Pintu',
         year: '2026',
         images: [
-          'assets/door_frame.png',
-          'assets/woodwork_factory.png',
-          'assets/hero_wood.png'
+          'assets/alaya_pool.png',
+          'assets/alaya_living.png',
+          'assets/alaya_dining.png',
+          'assets/alaya_bedroom.png',
+          'assets/alaya_room.png'
         ],
-        desc: 'Pintu utama rumah tinggal premium dengan material kayu Jati Jawa Tengah pilihan. Dibuat menggunakan teknik purus tembus dan di-finishing dengan sanding sealer berkualitas tinggi untuk ketahanan cuaca luar ruangan.',
-        metricVal1: 'Jati',
-        metricLbl1: 'Karakter Kayu',
-        metricVal2: 'Solid',
-        metricLbl2: 'Sistem Struktur'
+        desc: 'Proyek prestisius di Villa Alaya, Petitenget, Bali yang menggabungkan kekuatan struktur konstruksi dengan keindahan kayu premium. Pekerjaan komprehensif ini meliputi pemasangan ceiling lambersering kayu ulin pada area plafon interior dan semi-terbuka, pemasangan lantai pooldeck eksterior berbahan ulin Kalimantan tahan cuaca ekstrem di sekitar kolam renang, serta pabrikasi dan instalasi pintu kayu solid kustom dengan presisi tinggi.',
+        metricVal1: 'Maret - Mei 2026',
+        metricLbl1: 'Durasi Kerja',
+        metricVal2: 'Ulin & Jati',
+        metricLbl2: 'Material Utama'
       },
       'portfolio-item-2': {
         title: 'Plafon Kayu Kamper',

@@ -1530,7 +1530,7 @@ footer.site-footer {
 }
 
 .showcase-modal-box {
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
   border-radius: 24px;
   max-width: 1060px;
   width: 100%;
@@ -1551,7 +1551,7 @@ footer.site-footer {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-primary);
-  background-color: var(--color-bg);
+  background-color: var(--color-background);
   border: 1px solid var(--color-border);
   width: 40px;
   height: 40px;

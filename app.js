@@ -295,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
         category: 'Pooldeck, Lambersering & Pintu',
         year: '2026',
         images: [
-          'assets/alaya_pool.png',
+          'assets/alaya_pool.jpg',
           'assets/alaya_living.png',
           'assets/alaya_dining.png',
           'assets/alaya_bedroom.png',

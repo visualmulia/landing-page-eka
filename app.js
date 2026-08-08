@@ -354,18 +354,20 @@ document.addEventListener('DOMContentLoaded', () => {
         metricLbl2: 'Material Utama'
       },
       'portfolio-item-5': {
-        title: 'Aksen Dinding Kayu Teak',
-        category: 'Lambersering',
-        year: '2026',
+        title: 'Villa Ibu Juli - Singaraja, Bali',
+        category: 'Cladding, Pooldeck & Ceiling',
+        year: '2025',
         images: [
-          'assets/lambersering.png',
-          'assets/luxury_wood_interior.png'
+          'assets/juli_double_shower.jpg',
+          'assets/juli_shower_tree.jpg',
+          'assets/juli_entrance.jpg',
+          'assets/juli_ceiling.jpg'
         ],
-        desc: 'Pekerjaan wall paneling kustom pada lobby resor. Menggabungkan bilah kayu jati solid dengan pola asimetris modern untuk menciptakan aksen visual ruangan yang hangat dan mewah.',
-        metricVal1: 'Teak',
-        metricLbl1: 'Karakter Kayu',
-        metricVal2: 'Resor',
-        metricLbl2: 'Tipe Proyek'
+        desc: 'Proyek pengerjaan interior dan eksterior mewah di Villa Ibu Juli, Singaraja, Bali. Lingkup pengerjaan meliputi pemasangan cladding wall panel kayu jati solid untuk kesan ruangan yang hangat dan natural, pengerjaan lantai kolam renang (pooldeck) kayu ulin Kalimantan grade A yang tahan air dan cuaca lembap, serta instalasi plafon (ceiling) kayu Bengkirai dengan rakitan presisi tinggi.',
+        metricVal1: '2025',
+        metricLbl1: 'Tahun Proyek',
+        metricVal2: 'Ulin, Jati & Bengkirai',
+        metricLbl2: 'Material Utama'
       },
       'portfolio-item-6': {
         title: 'Outdoor Teras Bengkirai',

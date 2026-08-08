@@ -308,19 +308,19 @@ document.addEventListener('DOMContentLoaded', () => {
         metricLbl2: 'Material Utama'
       },
       'portfolio-item-2': {
-        title: 'Plafon Kayu Kamper',
-        category: 'Lambersering',
+        title: 'Villa Wisnu - Kerobokan, Bali',
+        category: 'Facade, Pooldeck & Pintu',
         year: '2026',
         images: [
-          'assets/lambersering.png',
-          'assets/luxury_wood_interior.png',
-          'assets/luxury_wood_bedroom.png'
+          'assets/wisnu_pool_night.jpg',
+          'assets/wisnu_pool_day.jpg',
+          'assets/wisnu_pergola.jpg'
         ],
-        desc: 'Instalasi langit-langit panel kayu kamper (lambersering) bermotif garis lurus natural. Di-finishing menggunakan warna satin teak dengan coating anti air untuk mencegah deformasi akibat kelembapan atap.',
-        metricVal1: 'Kamper',
-        metricLbl1: 'Karakter Kayu',
-        metricVal2: 'Satin',
-        metricLbl2: 'Tingkat Gloss'
+        desc: 'Proyek pembangunan eksterior dan interior premium di Villa Wisnu, Kerobokan, Bali. Lingkup pengerjaan mencakup instalasi facade kisi-kisi (screen) kayu ulin Kalimantan vertikal yang memberikan privasi sekaligus estetika modern tropis, pemasangan lantai kolam renang (pooldeck) kayu ulin grade A dengan sambungan presisi dan ketahanan cuaca prima, serta pembuatan dan pemasangan pintu-pintu kayu jati solid kustom yang kokoh dan elegan.',
+        metricVal1: 'Feb - Mei 2026',
+        metricLbl1: 'Durasi Kerja',
+        metricVal2: 'Ulin Kalimantan',
+        metricLbl2: 'Material Utama'
       },
       'portfolio-item-3': {
         title: 'Pooldeck Kayu Ulin',

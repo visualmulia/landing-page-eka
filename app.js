@@ -370,18 +370,18 @@ document.addEventListener('DOMContentLoaded', () => {
         metricLbl2: 'Material Utama'
       },
       'portfolio-item-6': {
-        title: 'Outdoor Teras Bengkirai',
-        category: 'Pooldeck & Decking',
-        year: '2026',
+        title: 'Villa Eva - Tegal Cupek, Bali',
+        category: 'Stepping Tangga & Railing',
+        year: '2025',
         images: [
-          'assets/pooldeck.png',
-          'assets/luxury_wood_decking.png'
+          'assets/eva_stairs_front.jpg',
+          'assets/eva_stairs_side.jpg'
         ],
-        desc: 'Decking teras balkon luar ruangan dengan kayu bengkirai yang kokoh dan tahan lama. Dipasang dengan finishing anti-slip bertingkat untuk menunjang keamanan di area rawan basah.',
-        metricVal1: 'Bengkirai',
-        metricLbl1: 'Karakter Kayu',
-        metricVal2: 'Anti-Slip',
-        metricLbl2: 'Sistem Struktur'
+        desc: 'Proyek pengerjaan detail interior kustom di Villa Eva, Tegal Cupek, Bali. Lingkup pengerjaan meliputi pemasangan stepping tangga kayu (cladding anak tangga) dengan material kayu solid pilihan bermotif serat lurus yang indah, dilengkapi sistem pencahayaan LED tersembunyi di bawah anak tangga untuk faktor keselamatan dan estetika modern, serta pemasangan railing besi minimalis dengan handrail kayu jati solid halus.',
+        metricVal1: '2025',
+        metricLbl1: 'Tahun Proyek',
+        metricVal2: 'Jati & Besi Hitam',
+        metricLbl2: 'Material Utama'
       }
     };
 

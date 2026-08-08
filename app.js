@@ -302,8 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
           'assets/alaya_room.png'
         ],
         desc: 'Proyek prestisius di Villa Alaya, Petitenget, Bali yang menggabungkan kekuatan struktur konstruksi dengan keindahan kayu premium. Pekerjaan komprehensif ini meliputi pemasangan ceiling lambersering kayu ulin pada area plafon interior dan semi-terbuka, pemasangan lantai pooldeck eksterior berbahan ulin Kalimantan tahan cuaca ekstrem di sekitar kolam renang, serta pabrikasi dan instalasi pintu kayu solid kustom dengan presisi tinggi.',
-        metricVal1: 'Maret - Mei 2026',
-        metricLbl1: 'Durasi Kerja',
+        metricVal1: '2026',
+        metricLbl1: 'Tahun Proyek',
         metricVal2: 'Ulin & Jati',
         metricLbl2: 'Material Utama'
       },
@@ -317,24 +317,27 @@ document.addEventListener('DOMContentLoaded', () => {
           'assets/wisnu_pergola.jpg'
         ],
         desc: 'Proyek pembangunan eksterior dan interior premium di Villa Wisnu, Kerobokan, Bali. Lingkup pengerjaan mencakup instalasi facade kisi-kisi (screen) kayu ulin Kalimantan vertikal yang memberikan privasi sekaligus estetika modern tropis, pemasangan lantai kolam renang (pooldeck) kayu ulin grade A dengan sambungan presisi dan ketahanan cuaca prima, serta pembuatan dan pemasangan pintu-pintu kayu jati solid kustom yang kokoh dan elegan.',
-        metricVal1: 'Feb - Mei 2026',
-        metricLbl1: 'Durasi Kerja',
+        metricVal1: '2026',
+        metricLbl1: 'Tahun Proyek',
         metricVal2: 'Ulin Kalimantan',
         metricLbl2: 'Material Utama'
       },
       'portfolio-item-3': {
-        title: 'Pooldeck Kayu Ulin',
-        category: 'Pooldeck & Decking',
+        title: 'Villa S-S - Petitenget, Bali',
+        category: 'Facade, Railing & Pintu',
         year: '2026',
         images: [
-          'assets/pooldeck.png',
-          'assets/luxury_wood_decking.png'
+          'assets/ss_facade.jpg',
+          'assets/ss_door.jpg',
+          'assets/ss_pergola.jpg',
+          'assets/ss_railing.jpg',
+          'assets/ss_entrance.jpg'
         ],
-        desc: 'Decking area kolam renang menggunakan kayu ulin Kalimantan grade ekspor. Kayu ulin dipasang dengan sekrup stainless steel tersembunyi, di-sanding presisi, dan diberi lapisan decking oil alami untuk ketahanan cuaca ekstrem.',
-        metricVal1: 'Ulin',
-        metricLbl1: 'Karakter Kayu',
-        metricVal2: 'SNI',
-        metricLbl2: 'Uji Kekuatan'
+        desc: 'Proyek kontemporer di Villa S-S, Petitenget, Bali. Lingkup pengerjaan meliputi perancangan dan pemasangan facade kisi-kisi pelindung dari kayu Bengkirai premium yang tahan cuaca, railing kayu minimalis yang dipadukan dengan struktur kaca tempered, pergola kayu estetis untuk pencahayaan alami di koridor lantai atas, serta pembuatan pintu kayu solid bermotif garis vertikal dengan finishing warna teak alami.',
+        metricVal1: '2026',
+        metricLbl1: 'Tahun Proyek',
+        metricVal2: 'Bengkirai & Jati',
+        metricLbl2: 'Material Utama'
       },
       'portfolio-item-4': {
         title: 'Finishing Clear Gloss Teak',

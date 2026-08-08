@@ -340,18 +340,18 @@ document.addEventListener('DOMContentLoaded', () => {
         metricLbl2: 'Material Utama'
       },
       'portfolio-item-4': {
-        title: 'Finishing Clear Gloss Teak',
-        category: 'Kusen & Pintu',
+        title: 'Villa Semilir, Cemagi - Bali',
+        category: 'Facade & Cladding',
         year: '2026',
         images: [
-          'assets/hero_wood.png',
-          'assets/door_frame.png'
+          'assets/semilir_pool.jpg',
+          'assets/semilir_street.jpg'
         ],
-        desc: 'Pekerjaan refinishing kusen jendela kayu jati tua pada hunian kolonial. Pengamplasan total hingga serat asli terlihat, diikuti pelapisan polyurethane clear gloss premium untuk perlindungan UV maksimal.',
-        metricVal1: 'Jati Tua',
-        metricLbl1: 'Karakter Kayu',
-        metricVal2: 'Gloss',
-        metricLbl2: 'Tingkat Gloss'
+        desc: 'Proyek fasad eksterior modern tropis di Villa Semilir, Cemagi, Bali. Pekerjaan berfokus pada pemasangan cladding facade luar ruangan berskala besar menggunakan kayu ulin Kalimantan pilihan. Permukaan kayu dibiarkan mengalami proses oksidasi alami (weathering) hingga menghasilkan warna abu-abu keperakan (weathered gray) yang eksotis, selaras dengan karakter arsitektur beton ekspos dan lanskap pesisir pantai Cemagi.',
+        metricVal1: '2026',
+        metricLbl1: 'Tahun Proyek',
+        metricVal2: 'Ulin Kalimantan',
+        metricLbl2: 'Material Utama'
       },
       'portfolio-item-5': {
         title: 'Aksen Dinding Kayu Teak',

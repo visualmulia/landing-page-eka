@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalog Karya & Portofolio Lengkap — Eka Konstruksi</title>
+  <meta name="description" content="Eksplorasi seluruh karya portofolio Eka Konstruksi: Konstruksi Sipil, Finishing Kayu Premium, Kusen & Pintu Jati, Lambersering, dan Pooldeck Kayu Ulin." />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Showcase Directory Custom Styles adapted to Eka Konstruksi Design Tokens */
+    .directory-hero {
+      padding: 9rem 0 4rem;
+      background: linear-gradient(135deg, rgba(28, 25, 23, 0.95), rgba(12, 10, 9, 0.92)), url('assets/luxury_wood_interior.png') center/cover no-repeat;
+      color: #ffffff;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .directory-hero-title {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: 1px;
+    }
+    .directory-hero-title span {
+      color: var(--color-accent);
+    }
+    .directory-hero-desc {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .directory-content-section {
+      padding: 3rem 0 6rem;
+      background-color: var(--color-background);
+    }
+    .directory-nav-bar {
+      margin-bottom: 2rem;
+    }
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-accent);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: var(--transition-fast);
+    }
+    .back-home-link:hover {
+      color: var(--color-accent-hover);
+      transform: translateX(-3px);
+    }
+    .directory-controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+      background: #ffffff;
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      border: 1px solid var(--color-border);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    }
+    .directory-controls-bar .portfolio-filter {
+      margin-bottom: 0;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .sort-control-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .sort-control-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    .sort-control-select {
+      padding: 0.5rem 1.5rem 0.5rem 1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      border-radius: 30px;
+      border: 1px solid var(--color-border);
+      background-color: var(--color-muted);
+      color: var(--color-primary);
+      outline: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      transition: var(--transition-fast);
+    }
+    .sort-control-select:focus {
+      border-color: var(--color-accent);
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation (Identical to index.html) -->
+  <header class="site-header scrolled" id="main-header" style="position: fixed; background: rgba(250, 250, 249, 0.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--color-border);">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <img src="assets/logo_eka_konstruksi_putih.png" alt="Logo Eka Konstruksi">
+        Eka Konstruksi<span>.</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="nav-menu-list">
+          <li><a href="index.html#beranda" class="nav-link">Beranda</a></li>
+          <li><a href="index.html#layanan" class="nav-link">Layanan</a></li>
+          <li><a href="index.html#portofolio" class="nav-link active">Portofolio</a></li>
+          <li><a href="index.html#filosofi" class="nav-link">Filosofi</a></li>
+          <li><a href="index.html#kontak" class="nav-link">Hubungi Kami</a></li>
+        </ul>
+      </nav>
+      
+      <div class="nav-cta">
+        <a href="index.html#kontak" class="btn btn-primary" id="header-cta-btn">Konsultasi</a>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-nav-menu" aria-label="Menu navigasi">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Panel -->
+  <div class="mobile-menu" id="mobile-nav-menu">
+    <ul class="mobile-menu-list">
+      <li><a href="index.html#beranda" class="mobile-menu-link">Beranda</a></li>
+      <li><a href="index.html#layanan" class="mobile-menu-link">Layanan</a></li>
+      <li><a href="index.html#portofolio" class="mobile-menu-link">Portofolio</a></li>
+      <li><a href="index.html#filosofi" class="mobile-menu-link">Filosofi</a></li>
+      <li><a href="index.html#kontak" class="mobile-menu-link">Hubungi Kami</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Directory Hero Banner -->
+    <section class="directory-hero">
+      <div class="container">
+        <h1 class="directory-hero-title">Katalog <span>Karya & Portofolio</span></h1>
+        <p class="directory-hero-desc">Daftar lengkap pengerjaan konstruksi sipil berstandar tinggi dan finishing kayu premium eksklusif untuk residensial mewah dan vila komersial di Bali.</p>
+      </div>
+    </section>
+
+    <!-- Directory Content Section -->
+    <section class="directory-content-section">
+      <div class="container">
+        <div class="directory-nav-bar">
+          <a href="index.html" class="back-home-link"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda Utama</a>
+        </div>
+
+        <!-- Controls Bar: Category Filter + Sort Dropdown -->
+        <div class="directory-controls-bar">
+          <div class="portfolio-filter" id="directoryFilterTabs">
+            <button class="filter-btn active" data-filter="all" id="tabAll">Semua Proyek</button>
+            <button class="filter-btn" data-filter="kusen" id="tabKusen">Kusen & Pintu</button>
+            <button class="filter-btn" data-filter="panel" id="tabPanel">Lambersering</button>
+            <button class="filter-btn" data-filter="decking" id="tabDecking">Pooldeck & Decking</button>
+          </div>
+
+          <div class="sort-control-group">
+            <label for="sortSelect" class="sort-control-label" id="sortLabel">Urutkan:</label>
+            <select id="sortSelect" class="sort-control-select">
+              <option value="default" id="optDefault">Urutan Kustom</option>
+              <option value="newest" id="optNewest">Terbaru → Terlama</option>
+              <option value="oldest" id="optOldest">Terlama → Terbaru</option>
+              <option value="title" id="optTitle">Nama Proyek (A - Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Showcase Portfolio Grid Container -->
+        <div class="portfolio-grid" id="showcaseDirectoryGrid" style="display: grid; gap: var(--space-md);">
+          <!-- Dynamically rendered by app.js Showcase Directory Engine -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Portfolio Showcase Modal Popup (Identical to index.html) -->
+  <div class="modal-overlay" id="showcaseModal">
+    <div class="showcase-modal-box">
+      <button class="modal-close" id="showcaseClose" aria-label="Close Modal">&times;</button>
+      
+      <!-- Left Column: Image & Carousel Controls -->
+      <div class="showcase-modal-left">
+        <div class="showcase-img-container">
+          <button class="carousel-nav-btn prev-btn" id="scPrevBtn" aria-label="Previous Slide">‹</button>
+          <img id="scMainImg" src="" alt="Showcase Preview" class="showcase-main-img" />
+          <button class="carousel-nav-btn next-btn" id="scNextBtn" aria-label="Next Slide">›</button>
+        </div>
+        <div class="showcase-carousel-dots" id="scDotsContainer"></div>
+      </div>
+
+      <!-- Right Column: Details & Metrics -->
+      <div class="showcase-modal-right">
+        <div>
+          <div class="showcase-tag-row">
+            <span class="showcase-badge" id="scBadge">Kusen & Pintu</span>
+            <span class="showcase-year" id="scYear">2026</span>
+          </div>
+
+          <h3 class="showcase-title" id="scTitle">Pintu Utama Jati Solid</h3>
+          <p class="showcase-desc" id="scDesc">
+            Pintu utama rumah tinggal premium dengan material kayu Jati Jawa Tengah pilihan...
+          </p>
+        </div>
+
+        <div>
+          <div class="showcase-metrics-grid">
+            <div>
+              <div class="metric-val" id="scVal1">Jati</div>
+              <div class="metric-lbl" id="scLbl1">Karakter Kayu</div>
+            </div>
+            <div>
+              <div class="metric-val" id="scVal2">Solid</div>
+              <div class="metric-lbl" id="scLbl2">Sistem Struktur</div>
+            </div>
+          </div>
+
+          <button id="scWaBtn" class="btn btn-dark" style="width: 100%; font-size: 0.95rem; padding: 0.85rem; background-color: var(--color-primary); color: #ffffff; border: none; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 30px; cursor: pointer;">
+            <span>💬 Hubungi via WhatsApp</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Identical to index.html) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: var(--space-sm); display: inline-block;">
+          <img src="assets/logo_eka_konstruksi_putih.png" alt="Logo Eka Konstruksi" style="filter: brightness(0) invert(1);">
+          Eka Konstruksi<span>.</span>
+        </a>
+        <p class="footer-desc">Menggabungkan kekuatan sipil beton bertulang berstandar SNI dan kemewahan pengerjaan kayu premium untuk hunian impian Anda di Bali.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/6281236090490" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-nav">
+        <h3>Navigasi</h3>
+        <ul class="footer-links">
+          <li><a href="index.html#beranda">Beranda</a></li>
+          <li><a href="index.html#layanan">Layanan Kami</a></li>
+          <li><a href="index.html#portofolio">Portofolio</a></li>
+          <li><a href="index.html#filosofi">Filosofi & Kualitas</a></li>
+          <li><a href="index.html#kontak">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h3>Kontak Kami</h3>
+        <p class="footer-desc"><strong>Workshop:</strong> Jl. Raya Kerobokan, Kuta Utara, Badung, Bali</p>
+        <p class="footer-desc" style="margin-top: 10px;"><strong>Hubungi Langsung:</strong><br><a href="https://wa.me/6281236090490" style="color: var(--color-accent); text-decoration: underline;">081236090490</a></p>
+      </div>
+      
+      <div class="footer-hours">
+        <h3>Jam Operasional</h3>
+        <p class="footer-desc" style="color: white; font-weight: 500;">Workshop & Showroom:</p>
+        <p class="footer-desc" style="margin-top: 5px;">Senin - Sabtu: 08.00 - 17.00 WITA<br>Minggu / Hari Libur: Tutup</p>
+        <p class="footer-desc" style="color: white; font-weight: 500; margin-top: 15px;">Konsultasi Online WhatsApp:</p>
+        <p class="footer-desc" style="margin-top: 5px;">Setiap Hari: 07.00 - 21.00 WITA</p>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; 2026 Eka Konstruksi. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

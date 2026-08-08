@@ -390,6 +390,22 @@ document.addEventListener('DOMContentLoaded', () => {
         metricLbl1: 'Tahun Proyek',
         metricVal2: 'Jati & Besi Hitam',
         metricLbl2: 'Material Utama'
+      },
+      'portfolio-item-7': {
+        title: 'You Spa Umalas - Bali',
+        category: 'Finishing Pintu & Flooring',
+        year: '2024',
+        images: [
+          'assets/spa_entrance_wide.jpg',
+          'assets/spa_door.jpg',
+          'assets/spa_flooring_angle.jpg',
+          'assets/spa_flooring_straight.jpg'
+        ],
+        desc: 'Proyek pengerjaan kayu estetik di You Spa Umalas, Bali. Pekerjaan berfokus pada finishing pintu masuk utama bermaterial kayu daur ulang bertekstur kasar (rustic wood door), pembuatan dan pemasangan ornamen kisi-kisi facade dekoratif di atas pintu, serta pemasangan lantai parket kayu jati bermotif herringbone (herringbone flooring parquet) dengan kualitas finishing super halus yang tahan lembap dan menunjang nuansa spa mewah.',
+        metricVal1: '2024',
+        metricLbl1: 'Tahun Proyek',
+        metricVal2: 'Jati & Ulin Daun',
+        metricLbl2: 'Material Utama'
       }
     };
 
@@ -539,5 +555,92 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+
+    // --- 8. Showcase Directory Engine (showcase.html) ---
+    const showcaseDirectoryGrid = document.getElementById('showcaseDirectoryGrid');
+    const sortSelect = document.getElementById('sortSelect');
+    const directoryFilterTabs = document.getElementById('directoryFilterTabs');
+    let directoryActiveFilter = 'all';
+    let directorySortMode = 'default';
+
+    function renderShowcaseDirectoryGrid() {
+      if (!showcaseDirectoryGrid) return;
+      showcaseDirectoryGrid.innerHTML = '';
+
+      // Convert portfolioData object to array
+      let items = Object.keys(portfolioData).map(key => {
+        let dataCategory = 'kusen panel decking';
+        if (key === 'portfolio-item-4') dataCategory = 'decking panel';
+        if (key === 'portfolio-item-6') dataCategory = 'kusen panel';
+        
+        return {
+          id: key,
+          dataCategory: dataCategory,
+          ...portfolioData[key]
+        };
+      });
+
+      // Apply Sorting Mode
+      if (directorySortMode === 'newest') {
+        items.sort((a, b) => b.year.localeCompare(a.year));
+      } else if (directorySortMode === 'oldest') {
+        items.sort((a, b) => a.year.localeCompare(b.year));
+      } else if (directorySortMode === 'title') {
+        items.sort((a, b) => a.title.localeCompare(b.title));
+      }
+
+      // Apply Category Filter
+      const matchingItems = items.filter(item => {
+        return directoryActiveFilter === 'all' || item.dataCategory.split(' ').includes(directoryActiveFilter);
+      });
+
+      matchingItems.forEach((item) => {
+        const thumbImg = (item.images && item.images.length > 0) ? item.images[0] : 'assets/logo_eka_konstruksi_putih.png';
+
+        const itemCard = document.createElement('div');
+        itemCard.className = 'portfolio-item';
+        itemCard.setAttribute('data-category', item.dataCategory);
+        itemCard.style.display = 'block';
+
+        itemCard.innerHTML = `
+          <img src="${thumbImg}" alt="${item.title}">
+          <div class="portfolio-overlay">
+            <span class="portfolio-cat">${item.category}</span>
+            <h3 class="portfolio-title">${item.title}</h3>
+            <p class="portfolio-desc">Tahun ${item.year}</p>
+          </div>
+        `;
+
+        itemCard.addEventListener('click', () => {
+          if (typeof openModal === 'function') {
+            openModal(item);
+          }
+        });
+
+        showcaseDirectoryGrid.appendChild(itemCard);
+      });
+    }
+
+    if (directoryFilterTabs) {
+      directoryFilterTabs.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          directoryFilterTabs.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          directoryActiveFilter = btn.getAttribute('data-filter');
+          renderShowcaseDirectoryGrid();
+        });
+      });
+    }
+
+    if (sortSelect) {
+      sortSelect.addEventListener('change', (e) => {
+        directorySortMode = e.target.value;
+        renderShowcaseDirectoryGrid();
+      });
+    }
+
+    // Call render once on load
+    renderShowcaseDirectoryGrid();
   }
 });

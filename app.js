@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', !expanded);
       mobileToggle.classList.toggle('active');
       mobileMenu.classList.toggle('active');
+      
+      // Prevent body scrolling when mobile menu is active
+      if (mobileMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
 
     mobileMenuLinks.forEach(link => {
@@ -17,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
       });
     });
   }

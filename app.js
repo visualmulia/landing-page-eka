@@ -406,6 +406,22 @@ document.addEventListener('DOMContentLoaded', () => {
         metricLbl1: 'Tahun Proyek',
         metricVal2: 'Jati & Ulin Daun',
         metricLbl2: 'Material Utama'
+      },
+      'portfolio-item-8': {
+        title: 'Private Residence - Canggu, Bali (Temporary)',
+        category: 'Facade Cladding & Gazebo',
+        year: '2025',
+        images: [
+          'assets/proj8_exterior.jpg',
+          'assets/proj8_bedroom.jpg',
+          'assets/proj8_gazebo.jpg',
+          'assets/proj8_lattice.jpg'
+        ],
+        desc: 'Proyek pengerjaan finishing kayu eksterior dan elemen arsitektur kustom di Canggu, Bali. Lingkup pengerjaan meliputi facade kisi-kisi kayu ulin vertikal untuk area pintu gerbang eksterior utama, kisi-kisi dekoratif pembatas ruang interior kamar tidur utama (bedroom screen), ornamen kisi dinding motif kotak (lattice wall panel), serta pengerjaan struktur gazebo (daybed) kayu luar ruangan lengkap dengan konstruksi kuda-kuda kokoh.',
+        metricVal1: '2025',
+        metricLbl1: 'Tahun Proyek',
+        metricVal2: 'Ulin & Jati',
+        metricLbl2: 'Material Utama'
       }
     };
 
